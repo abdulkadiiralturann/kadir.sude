@@ -14,8 +14,8 @@
         
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            background: linear-gradient(135deg, #1a0b1c 0%, #2d122b 50%, #160c1f 100%);
-            color: #fff;
+            background: linear-gradient(135deg, #0b0705 0%, #24140c 52%, #090605 100%);
+            color: #f7efe8;
             min-height: 100vh;
             overflow-x: hidden;
             user-select: none;
@@ -25,17 +25,17 @@
         .serif-font { font-family: 'Playfair Display', serif; }
 
         .glass {
-            background: rgba(255, 255, 255, 0.07);
+            background: rgba(38, 22, 14, 0.58);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(214, 168, 124, 0.16);
         }
 
         .glass-card {
-            background: linear-gradient(145deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.03) 100%);
+            background: linear-gradient(145deg, rgba(58, 34, 21, 0.72) 0%, rgba(18, 11, 7, 0.85) 100%);
             backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.35);
+            border: 1px solid rgba(214, 168, 124, 0.2);
+            box-shadow: 0 10px 32px 0 rgba(0, 0, 0, 0.55);
         }
 
         @keyframes floatUp {
@@ -61,9 +61,9 @@
 
         .pin-dot { transition: all 0.2s ease; }
         .pin-dot.active {
-            background-color: #f43f5e;
+            background-color: #d97742;
             transform: scale(1.25);
-            box-shadow: 0 0 12px #f43f5e;
+            box-shadow: 0 0 12px rgba(217, 119, 66, 0.85);
         }
 
         @keyframes shake {
@@ -77,48 +77,48 @@
 <body class="flex flex-col items-center justify-center">
 
     <!-- 1. KİLİT EKRANI -->
-    <div id="lockScreen" class="fixed inset-0 z-50 flex flex-col items-center justify-center p-6 bg-gradient-to-b from-[#1a0b1c] to-[#0f0611]">
-        <div class="w-20 h-20 rounded-full glass-card flex items-center justify-center mb-6 shadow-lg shadow-rose-500/20">
-            <i class="fa-solid fa-heart text-3xl text-rose-500 animate-pulse"></i>
+    <div id="lockScreen" class="fixed inset-0 z-50 flex flex-col items-center justify-center p-6 bg-gradient-to-b from-[#1a0f0a] via-[#110906] to-[#070403]">
+        <div class="w-20 h-20 rounded-full glass-card flex items-center justify-center mb-6 shadow-lg shadow-amber-900/40">
+            <i class="fa-solid fa-heart text-3xl text-amber-400 animate-pulse"></i>
         </div>
-        <h1 class="serif-font text-3xl font-bold mb-1 tracking-wide">Kadir & Sude</h1>
-        <p class="text-rose-200/70 text-sm mb-8">Özel dünyamıza girmek için şifreyi gir</p>
+        <h1 class="serif-font text-3xl font-bold mb-1 tracking-wide text-amber-50">Kadir & Sude</h1>
+        <p class="text-amber-200/70 text-sm mb-8">Özel dünyamıza girmek için şifreyi gir, aşkım</p>
 
         <div id="pinDots" class="flex gap-4 mb-8">
-            <div class="pin-dot w-4 h-4 rounded-full border-2 border-rose-400/50"></div>
-            <div class="pin-dot w-4 h-4 rounded-full border-2 border-rose-400/50"></div>
-            <div class="pin-dot w-4 h-4 rounded-full border-2 border-rose-400/50"></div>
-            <div class="pin-dot w-4 h-4 rounded-full border-2 border-rose-400/50"></div>
+            <div class="pin-dot w-4 h-4 rounded-full border-2 border-amber-400/50"></div>
+            <div class="pin-dot w-4 h-4 rounded-full border-2 border-amber-400/50"></div>
+            <div class="pin-dot w-4 h-4 rounded-full border-2 border-amber-400/50"></div>
+            <div class="pin-dot w-4 h-4 rounded-full border-2 border-amber-400/50"></div>
         </div>
 
         <div class="grid grid-cols-3 gap-4 max-w-[260px] w-full">
-            <button onclick="enterPin('1')" class="glass h-16 rounded-2xl text-2xl font-semibold active:bg-rose-500/30 transition">1</button>
-            <button onclick="enterPin('2')" class="glass h-16 rounded-2xl text-2xl font-semibold active:bg-rose-500/30 transition">2</button>
-            <button onclick="enterPin('3')" class="glass h-16 rounded-2xl text-2xl font-semibold active:bg-rose-500/30 transition">3</button>
-            <button onclick="enterPin('4')" class="glass h-16 rounded-2xl text-2xl font-semibold active:bg-rose-500/30 transition">4</button>
-            <button onclick="enterPin('5')" class="glass h-16 rounded-2xl text-2xl font-semibold active:bg-rose-500/30 transition">5</button>
-            <button onclick="enterPin('6')" class="glass h-16 rounded-2xl text-2xl font-semibold active:bg-rose-500/30 transition">6</button>
-            <button onclick="enterPin('7')" class="glass h-16 rounded-2xl text-2xl font-semibold active:bg-rose-500/30 transition">7</button>
-            <button onclick="enterPin('8')" class="glass h-16 rounded-2xl text-2xl font-semibold active:bg-rose-500/30 transition">8</button>
-            <button onclick="enterPin('9')" class="glass h-16 rounded-2xl text-2xl font-semibold active:bg-rose-500/30 transition">9</button>
+            <button onclick="enterPin('1')" class="glass h-16 rounded-2xl text-2xl font-semibold active:bg-amber-700/40 transition">1</button>
+            <button onclick="enterPin('2')" class="glass h-16 rounded-2xl text-2xl font-semibold active:bg-amber-700/40 transition">2</button>
+            <button onclick="enterPin('3')" class="glass h-16 rounded-2xl text-2xl font-semibold active:bg-amber-700/40 transition">3</button>
+            <button onclick="enterPin('4')" class="glass h-16 rounded-2xl text-2xl font-semibold active:bg-amber-700/40 transition">4</button>
+            <button onclick="enterPin('5')" class="glass h-16 rounded-2xl text-2xl font-semibold active:bg-amber-700/40 transition">5</button>
+            <button onclick="enterPin('6')" class="glass h-16 rounded-2xl text-2xl font-semibold active:bg-amber-700/40 transition">6</button>
+            <button onclick="enterPin('7')" class="glass h-16 rounded-2xl text-2xl font-semibold active:bg-amber-700/40 transition">7</button>
+            <button onclick="enterPin('8')" class="glass h-16 rounded-2xl text-2xl font-semibold active:bg-amber-700/40 transition">8</button>
+            <button onclick="enterPin('9')" class="glass h-16 rounded-2xl text-2xl font-semibold active:bg-amber-700/40 transition">9</button>
             <div class="h-16"></div>
-            <button onclick="enterPin('0')" class="glass h-16 rounded-2xl text-2xl font-semibold active:bg-rose-500/30 transition">0</button>
-            <button onclick="deletePin()" class="glass h-16 rounded-2xl text-xl text-rose-300 active:bg-rose-500/30 transition"><i class="fa-solid fa-delete-left"></i></button>
+            <button onclick="enterPin('0')" class="glass h-16 rounded-2xl text-2xl font-semibold active:bg-amber-700/40 transition">0</button>
+            <button onclick="deletePin()" class="glass h-16 rounded-2xl text-xl text-amber-300 active:bg-amber-700/40 transition"><i class="fa-solid fa-delete-left"></i></button>
         </div>
-        <p class="text-xs text-white/30 mt-8">İpucu: Başlangıç günümüz ve ayımız (0911)</p>
+        <p class="text-xs text-amber-100/35 mt-8">İpucu: Başlangıç günümüz ve ayımız (0911)</p>
     </div>
 
     <!-- 2. PROFİL SEÇİM EKRANI -->
-    <div id="profileScreen" class="hidden fixed inset-0 z-40 flex flex-col items-center justify-center p-6 bg-gradient-to-b from-[#1a0b1c] to-[#0f0611]">
-        <h2 class="serif-font text-2xl font-bold mb-2">Kim Giriş Yapıyor?</h2>
-        <p class="text-sm text-rose-200/70 mb-8">Bildirimlerin doğru gitmesi için profilini seç</p>
+    <div id="profileScreen" class="hidden fixed inset-0 z-40 flex flex-col items-center justify-center p-6 bg-gradient-to-b from-[#1a0f0a] via-[#110906] to-[#070403]">
+        <h2 class="serif-font text-2xl font-bold mb-2 text-amber-50">Kim Giriş Yapıyor?</h2>
+        <p class="text-sm text-amber-200/70 mb-8">Dudu'm ve ben için profilini seç, yavrum</p>
         <div class="flex gap-6">
-            <button onclick="selectProfile('Kadir')" class="glass-card p-6 rounded-3xl flex flex-col items-center w-36 hover:border-rose-500 transition active:scale-95">
-                <div class="w-16 h-16 rounded-full bg-gradient-to-tr from-blue-500 to-indigo-600 flex items-center justify-center text-2xl font-bold mb-3 shadow-lg">K</div>
+            <button onclick="selectProfile('Kadir')" class="glass-card p-6 rounded-3xl flex flex-col items-center w-36 hover:border-amber-400 transition active:scale-95">
+                <div class="w-16 h-16 rounded-full bg-gradient-to-tr from-stone-700 to-amber-700 flex items-center justify-center text-2xl font-bold mb-3 shadow-lg text-amber-50">K</div>
                 <span class="font-bold text-lg">Kadir</span>
             </button>
-            <button onclick="selectProfile('Sude')" class="glass-card p-6 rounded-3xl flex flex-col items-center w-36 hover:border-rose-500 transition active:scale-95">
-                <div class="w-16 h-16 rounded-full bg-gradient-to-tr from-rose-500 to-pink-500 flex items-center justify-center text-2xl font-bold mb-3 shadow-lg">S</div>
+            <button onclick="selectProfile('Sude')" class="glass-card p-6 rounded-3xl flex flex-col items-center w-36 hover:border-amber-400 transition active:scale-95">
+                <div class="w-16 h-16 rounded-full bg-gradient-to-tr from-amber-700 to-orange-600 flex items-center justify-center text-2xl font-bold mb-3 shadow-lg text-amber-50">S</div>
                 <span class="font-bold text-lg">Sude</span>
             </button>
         </div>
@@ -130,19 +130,21 @@
         <!-- Üst Bar & Müzik Çalar -->
         <div class="glass-card rounded-2xl p-3 mb-5 flex items-center justify-between">
             <div class="flex items-center gap-3">
-                <div id="vinylDisc" class="w-10 h-10 rounded-full bg-gradient-to-tr from-rose-600 to-amber-500 flex items-center justify-center shadow-md vinyl-spin">
-                    <i class="fa-solid fa-music text-xs text-white"></i>
+                <div id="vinylDisc" class="w-10 h-10 rounded-full bg-gradient-to-tr from-amber-800 to-amber-500 flex items-center justify-center shadow-md vinyl-spin">
+                    <i class="fa-solid fa-music text-xs text-amber-50"></i>
                 </div>
                 <div>
-                    <div class="text-xs font-bold text-rose-300">Sezen Aksu</div>
+                    <div class="text-xs font-bold text-amber-300">Sezen Aksu</div>
                     <div class="text-sm font-semibold">İlk Günki Gibi</div>
                 </div>
             </div>
             <div class="flex items-center gap-2">
-                <button onclick="toggleMusic()" id="musicBtn" class="w-9 h-9 rounded-full bg-rose-500/20 text-rose-400 flex items-center justify-center hover:bg-rose-500 hover:text-white transition">
+                <button onclick="toggleMusic()" id="musicBtn" class="w-9 h-9 rounded-full bg-amber-500/20 text-amber-300 flex items-center justify-center hover:bg-amber-600 hover:text-white transition">
                     <i class="fa-solid fa-pause"></i>
                 </button>
-                <span id="currentUserBadge" class="text-xs px-2.5 py-1 rounded-full bg-white/10 font-medium"></span>
+                <button onclick="switchProfileQuick()" title="Profil Değiştir" class="text-xs px-2.5 py-1 rounded-full bg-amber-950/80 border border-amber-500/25 text-amber-200 font-medium hover:border-amber-400 transition">
+                    <span id="currentUserBadge"></span> <i class="fa-solid fa-repeat ml-1 text-[10px]"></i>
+                </button>
             </div>
         </div>
 
@@ -156,28 +158,28 @@
         <div id="tab-home" class="tab-content space-y-5">
             <!-- 2. Yıl Dönümü Kartı -->
             <div class="glass-card rounded-3xl p-6 text-center relative overflow-hidden">
-                <div class="inline-block px-3 py-1 rounded-full bg-rose-500/20 text-rose-300 text-xs font-semibold mb-2">
+                <div class="inline-block px-3 py-1 rounded-full bg-amber-500/15 border border-amber-400/25 text-amber-300 text-xs font-semibold mb-2">
                     <i class="fa-solid fa-sparkles mr-1"></i> 2. Yıl Dönümümüz Kutlu Olsun
                 </div>
-                <h1 class="serif-font text-2xl font-bold mb-1">Kadir ❤️ Sude</h1>
-                <p class="text-xs text-white/60 mb-5">09 Kasım 2024'ten beri seninle her an...</p>
+                <h1 class="serif-font text-2xl font-bold mb-1 text-amber-50">Kadir ❤️ Sude</h1>
+                <p class="text-xs text-amber-100/65 mb-5">09 Kasım 2024'ten beri cimcime dudu'mla her an...</p>
 
                 <div class="grid grid-cols-4 gap-2 text-center">
                     <div class="glass rounded-2xl p-2.5">
-                        <div id="days" class="text-xl font-extrabold text-rose-400">0</div>
-                        <div class="text-[10px] text-white/60 uppercase">Gün</div>
+                        <div id="days" class="text-xl font-extrabold text-amber-400">0</div>
+                        <div class="text-[10px] text-amber-100/60 uppercase">Gün</div>
                     </div>
                     <div class="glass rounded-2xl p-2.5">
-                        <div id="hours" class="text-xl font-extrabold text-rose-400">0</div>
-                        <div class="text-[10px] text-white/60 uppercase">Saat</div>
+                        <div id="hours" class="text-xl font-extrabold text-amber-400">0</div>
+                        <div class="text-[10px] text-amber-100/60 uppercase">Saat</div>
                     </div>
                     <div class="glass rounded-2xl p-2.5">
-                        <div id="minutes" class="text-xl font-extrabold text-rose-400">0</div>
-                        <div class="text-[10px] text-white/60 uppercase">Dakika</div>
+                        <div id="minutes" class="text-xl font-extrabold text-amber-400">0</div>
+                        <div class="text-[10px] text-amber-100/60 uppercase">Dakika</div>
                     </div>
                     <div class="glass rounded-2xl p-2.5">
-                        <div id="seconds" class="text-xl font-extrabold text-rose-400">0</div>
-                        <div class="text-[10px] text-white/60 uppercase">Saniye</div>
+                        <div id="seconds" class="text-xl font-extrabold text-amber-400">0</div>
+                        <div class="text-[10px] text-amber-100/60 uppercase">Saniye</div>
                     </div>
                 </div>
             </div>
@@ -185,132 +187,173 @@
             <!-- Günün Sözü -->
             <div class="glass-card rounded-3xl p-5">
                 <div class="flex items-center justify-between mb-2">
-                    <span class="text-xs font-bold text-rose-300 uppercase tracking-wider"><i class="fa-solid fa-quote-left mr-1"></i> Senin İçin Notum</span>
-                    <button onclick="nextQuote()" class="text-xs text-white/50 hover:text-white"><i class="fa-solid fa-rotate"></i> Değiştir</button>
+                    <span class="text-xs font-bold text-amber-300 uppercase tracking-wider"><i class="fa-solid fa-quote-left mr-1"></i> Senin İçin Notum</span>
+                    <button onclick="nextQuote()" class="text-xs text-amber-200/60 hover:text-amber-200"><i class="fa-solid fa-rotate"></i> Değiştir</button>
                 </div>
-                <p id="dailyQuote" class="serif-font italic text-base text-white/90 leading-relaxed">
-                    "İki yılımız geçti ama sana her baktığımda kalbim hala 9 Kasım 2024'teki ilk günkü gibi atıyor Sude."
+                <p id="dailyQuote" class="serif-font italic text-base text-amber-50/90 leading-relaxed">
+                    "İki yılımız geçti ama sana her baktığımda kalbim hala 9 Kasım 2024'teki ilk günkü gibi atıyor, aşkım."
                 </p>
             </div>
 
             <!-- Hızlı Bildirim Butonları -->
             <div class="glass-card rounded-3xl p-5">
-                <h3 class="text-xs font-bold text-white/70 uppercase tracking-wider mb-3">Tek Tuşla Haber Ver</h3>
+                <h3 class="text-xs font-bold text-amber-200/75 uppercase tracking-wider mb-3">Tek Tuşla Haber Ver</h3>
                 <div class="grid grid-cols-2 gap-3">
-                    <button onclick="sendPing('Seni çok özledim ❤️')" class="bg-gradient-to-r from-rose-500 to-pink-600 p-3.5 rounded-2xl font-bold text-sm shadow-lg shadow-rose-500/30 active:scale-95 transition flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-heart"></i> Seni Özledim
+                    <button onclick="sendPing('Seni çok özledim yavrum ❤️')" class="bg-gradient-to-r from-amber-700 to-stone-800 border border-amber-400/30 p-3.5 rounded-2xl font-bold text-sm shadow-lg shadow-black/40 active:scale-95 transition flex items-center justify-center gap-2 text-amber-50">
+                        <i class="fa-solid fa-heart text-amber-300"></i> Seni Özledim
                     </button>
-                    <button onclick="sendPing('Bugün buluşalım mı? 🥺')" class="glass p-3.5 rounded-2xl font-semibold text-sm hover:bg-white/10 active:scale-95 transition flex items-center justify-center gap-2 text-center leading-tight">
+                    <button onclick="sendPing('Bugün buluşalım mı mızmız? 🥺')" class="glass p-3.5 rounded-2xl font-semibold text-sm hover:bg-amber-900/40 active:scale-95 transition flex items-center justify-center gap-2 text-center leading-tight text-amber-50">
                         🥺 Bugün buluşalım mı?
                     </button>
-                    <a href="tel:+905462427813" onclick="sendPing('Arama başlatıldı 📞 (0546 242 78 13)')" class="glass p-3.5 rounded-2xl font-semibold text-sm hover:bg-white/10 active:scale-95 transition flex flex-col items-center justify-center gap-0.5 text-white no-underline">
+                    <a href="tel:+905462427813" onclick="sendPing('Arama başlatıldı 📞 (0546 242 78 13)')" class="glass p-3.5 rounded-2xl font-semibold text-sm hover:bg-amber-900/40 active:scale-95 transition flex flex-col items-center justify-center gap-0.5 text-amber-50 no-underline">
                         <span>📞 Beni Ara</span>
-                        <span class="text-[11px] text-rose-300/90 font-normal">0546 242 78 13</span>
+                        <span class="text-[11px] text-amber-300/90 font-normal">0546 242 78 13</span>
                     </a>
-                    <button onclick="sendPing('Kahve içelim mi? ☕')" class="glass p-3.5 rounded-2xl font-semibold text-sm hover:bg-white/10 active:scale-95 transition flex items-center justify-center gap-2">
+                    <button onclick="sendPing('Kahve içelim mi dudu? ☕')" class="glass p-3.5 rounded-2xl font-semibold text-sm hover:bg-amber-900/40 active:scale-95 transition flex items-center justify-center gap-2 text-amber-50">
                         ☕ Kahve?
                     </button>
                 </div>
-                <div id="pingHistory" class="mt-4 space-y-1.5 text-xs text-white/70"></div>
+                <div id="pingHistory" class="mt-4 space-y-1.5 text-xs text-amber-100/75"></div>
             </div>
         </div>
 
-        <!-- SEKME 2: MEKTUPLAR -->
-        <div id="tab-letters" class="tab-content hidden space-y-4">
-            <h2 class="serif-font text-2xl font-bold mb-1">Ne Zaman Açmalısın?</h2>
-            <p class="text-xs text-white/60 mb-4">Hangi ruh halindeysen o zarfa dokun...</p>
+        <!-- SEKME 2: ANILARIMIZ -->
+        <div id="tab-memories" class="tab-content hidden space-y-4">
+            <div class="glass-card rounded-3xl p-5">
+                <div class="flex items-center justify-between mb-1">
+                    <h2 class="serif-font text-2xl font-bold text-amber-50">Anılarımız</h2>
+                    <span class="text-xs px-2.5 py-1 rounded-full bg-amber-500/15 border border-amber-400/25 text-amber-300 font-semibold">30 Kare</span>
+                </div>
+                <p class="text-xs text-amber-200/65 mb-4">Dudu'mla ve cimcime aşkımla biriktirdiğimiz en güzel anlar — büyütmek için dokun.</p>
 
-            <div onclick="openLetter(0)" class="glass-card p-5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-98 transition">
+                <div id="memoryGallery" class="grid grid-cols-2 gap-3"></div>
+
+                <!-- Galeri Sonu Mesajı -->
+                <div class="mt-5 glass-card rounded-2xl p-5 text-center border border-amber-400/30">
+                    <div class="w-10 h-10 rounded-full bg-amber-500/20 text-amber-300 flex items-center justify-center mx-auto mb-2.5">
+                        <i class="fa-solid fa-film"></i>
+                    </div>
+                    <h3 class="serif-font text-base font-bold text-amber-200 mb-1.5">Daha Fazlası Yolda...</h3>
+                    <p class="serif-font italic text-xs text-amber-50/90 leading-relaxed">
+                        "Buraya sığmayan daha pek çok fotoğraf ve videomuz var yavrum... Dudu'mla ve cimcime aşkımla biriktirdiğimiz her an, mızmızlandığımız o tatlı günler bile yakında tek tek buraya yüklenecek; bu albüm hiç bitmeyecek."
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEKME 3: MEKTUPLAR -->
+        <div id="tab-letters" class="tab-content hidden space-y-4">
+            <h2 class="serif-font text-2xl font-bold mb-1 text-amber-50">Ne Zaman Açmalısın?</h2>
+            <p class="text-xs text-amber-200/65 mb-4">Hangi ruh halindeysen o zarfa dokun, cimcime...</p>
+
+            <div onclick="openMissYouLetter()" class="glass-card p-5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-98 transition">
                 <div class="flex items-center gap-4">
-                    <div class="w-12 h-12 rounded-2xl bg-rose-500/20 text-rose-400 flex items-center justify-center text-xl"><i class="fa-solid fa-envelope-open-text"></i></div>
+                    <div class="w-12 h-12 rounded-2xl bg-amber-500/20 text-amber-300 flex items-center justify-center text-xl"><i class="fa-solid fa-envelope-open-text"></i></div>
                     <div>
-                        <div class="font-bold">Beni Çok Özlediğinde Aç</div>
-                        <div class="text-xs text-white/50">Yanında olamadığım anlar için...</div>
+                        <div class="font-bold text-amber-50">Beni Çok Özlediğinde Aç</div>
+                        <div class="text-xs text-amber-200/55">Her basışta değişen özlem sözleri...</div>
                     </div>
                 </div>
-                <i class="fa-solid fa-chevron-right text-white/30"></i>
+                <i class="fa-solid fa-chevron-right text-amber-200/40"></i>
             </div>
 
             <div onclick="openLetter(1)" class="glass-card p-5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-98 transition">
                 <div class="flex items-center gap-4">
-                    <div class="w-12 h-12 rounded-2xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-xl"><i class="fa-solid fa-face-smile-beam"></i></div>
+                    <div class="w-12 h-12 rounded-2xl bg-amber-600/20 text-amber-300 flex items-center justify-center text-xl"><i class="fa-solid fa-face-smile-beam"></i></div>
                     <div>
-                        <div class="font-bold">Gülümsemeye İhtiyacın Olduğunda</div>
-                        <div class="text-xs text-white/50">Keyfin biraz kaçtıysa buraya tıkla</div>
+                        <div class="font-bold text-amber-50">Gülümsemeye İhtiyacın Olduğunda</div>
+                        <div class="text-xs text-amber-200/55">Mızmızlandığın anlar için buraya tıkla</div>
                     </div>
                 </div>
-                <i class="fa-solid fa-chevron-right text-white/30"></i>
+                <i class="fa-solid fa-chevron-right text-amber-200/40"></i>
             </div>
 
             <div onclick="openLetter(2)" class="glass-card p-5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-98 transition">
                 <div class="flex items-center gap-4">
-                    <div class="w-12 h-12 rounded-2xl bg-purple-500/20 text-purple-400 flex items-center justify-center text-xl"><i class="fa-solid fa-star"></i></div>
+                    <div class="w-12 h-12 rounded-2xl bg-stone-600/30 text-amber-300 flex items-center justify-center text-xl"><i class="fa-solid fa-star"></i></div>
                     <div>
-                        <div class="font-bold">2. Yıl Dönümü Mektubum</div>
-                        <div class="text-xs text-white/50">09.11.2026 özel notum</div>
+                        <div class="font-bold text-amber-50">2. Yıl Dönümü Mektubum</div>
+                        <div class="text-xs text-amber-200/55">09.11.2026 özel notum</div>
                     </div>
                 </div>
-                <i class="fa-solid fa-chevron-right text-white/30"></i>
+                <i class="fa-solid fa-chevron-right text-amber-200/40"></i>
             </div>
         </div>
 
-        <!-- SEKME 3: HAYALLERİMİZ -->
+        <!-- SEKME 4: HAYALLERİMİZ -->
         <div id="tab-bucket" class="tab-content hidden space-y-4">
-            <h2 class="serif-font text-2xl font-bold mb-1">Ortak Hayallerimiz</h2>
-            <p class="text-xs text-white/60 mb-3">Birlikte gerçekleştireceğimiz hedefler</p>
+            <h2 class="serif-font text-2xl font-bold mb-1 text-amber-50">Ortak Hayallerimiz</h2>
+            <p class="text-xs text-amber-200/65 mb-3">Birlikte gerçekleştireceğimiz hedefler, aşkım</p>
 
             <div class="flex gap-2 mb-4">
-                <input id="newGoalInput" type="text" placeholder="Yeni bir hayal ekle..." class="glass flex-1 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-rose-500">
-                <button onclick="addGoal()" class="bg-rose-500 px-4 rounded-xl font-bold text-sm"><i class="fa-solid fa-plus"></i></button>
+                <input id="newGoalInput" type="text" placeholder="Yeni bir hayal ekle..." class="glass flex-1 rounded-xl px-4 py-3 text-sm text-amber-50 placeholder-amber-200/40 focus:outline-none focus:border-amber-400">
+                <button onclick="addGoal()" class="bg-amber-700 hover:bg-amber-600 px-4 rounded-xl font-bold text-sm text-amber-50 transition"><i class="fa-solid fa-plus"></i></button>
             </div>
 
             <div id="goalList" class="space-y-2.5"></div>
         </div>
 
-        <!-- SEKME 4: EĞLENCE & ÇARK -->
-        <div id="tab-games" class="tab-content hidden space-y-5">
-            <div class="glass-card rounded-3xl p-6 text-center">
-                <h2 class="serif-font text-2xl font-bold mb-1">Bugün Ne Yapalım?</h2>
-                <p class="text-xs text-white/60 mb-6">Kararsız kaldığımızda şans çarkını çevir!</p>
+        <!-- SEKME 5: GİDİLECEK YERLER -->
+        <div id="tab-places" class="tab-content hidden space-y-4">
+            <div class="glass-card rounded-3xl p-5">
+                <h2 class="serif-font text-2xl font-bold mb-1 text-amber-50">Gidilecek Yerler</h2>
+                <p class="text-xs text-amber-200/65 mb-4">Kadir ve Sude profillerinde ortak görünür — dilediğin yeri ekle, yavrum</p>
 
-                <div class="w-48 h-48 mx-auto rounded-full border-4 border-rose-500/50 glass flex items-center justify-center p-4 mb-6 shadow-xl shadow-rose-500/10">
-                    <div id="wheelResult" class="font-bold text-lg text-rose-300">Çarkı Çevir! 🎡</div>
+                <div class="flex gap-2 mb-4">
+                    <input id="newPlaceInput" type="text" placeholder="Gidilecek yer yaz (ör. sahil, kafe...)" class="glass flex-1 rounded-xl px-4 py-3 text-sm text-amber-50 placeholder-amber-200/40 focus:outline-none focus:border-amber-400">
+                    <button onclick="addPlace()" class="bg-amber-700 hover:bg-amber-600 px-4 rounded-xl font-bold text-sm text-amber-50 transition"><i class="fa-solid fa-plus"></i></button>
                 </div>
 
-                <button onclick="spinWheel()" class="w-full bg-gradient-to-r from-rose-500 to-purple-600 py-3.5 rounded-2xl font-bold shadow-lg active:scale-95 transition">
-                    Şansımızı Dene
-                </button>
+                <div id="placeList" class="space-y-2.5"></div>
             </div>
         </div>
 
     </div>
 
     <!-- MEKTUP OKUMA MODALI -->
-    <div id="letterModal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-6">
+    <div id="letterModal" class="hidden fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-6">
         <div class="glass-card max-w-sm w-full rounded-3xl p-6 relative">
-            <button onclick="closeLetter()" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/10 flex items-center justify-center"><i class="fa-solid fa-xmark"></i></button>
-            <h3 id="letterTitle" class="serif-font text-xl font-bold text-rose-300 mb-3"></h3>
-            <p id="letterBody" class="text-sm text-white/90 leading-relaxed whitespace-pre-line"></p>
+            <button onclick="closeLetter()" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-amber-950/80 border border-amber-500/25 flex items-center justify-center text-amber-200"><i class="fa-solid fa-xmark"></i></button>
+            <h3 id="letterTitle" class="serif-font text-xl font-bold text-amber-300 mb-3"></h3>
+            <p id="letterBody" class="text-sm text-amber-50/90 leading-relaxed whitespace-pre-line mb-5"></p>
+            <button id="nextMissYouBtn" onclick="cycleMissYouQuote()" class="hidden w-full bg-gradient-to-r from-amber-700 to-stone-800 border border-amber-400/35 py-3 rounded-2xl font-bold text-sm text-amber-50 active:scale-95 transition">
+                <i class="fa-solid fa-shuffle mr-2"></i> Başka Bir Söz Göster
+            </button>
+        </div>
+    </div>
+
+    <!-- FOTOĞRAF BÜYÜTME MODALI -->
+    <div id="photoModal" onclick="closePhotoModal()" class="hidden fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-5">
+        <div onclick="event.stopPropagation()" class="glass-card max-w-md w-full rounded-3xl p-4 relative">
+            <button onclick="closePhotoModal()" class="absolute top-3 right-3 z-10 w-9 h-9 rounded-full bg-black/70 border border-amber-400/30 flex items-center justify-center text-amber-100">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <img id="modalPhotoImg" src="" alt="Anımız" class="w-full max-h-[70vh] object-contain rounded-2xl bg-black/40 mb-3">
+            <p id="modalPhotoCaption" class="serif-font italic text-sm text-amber-100 text-center px-2"></p>
         </div>
     </div>
 
     <!-- ALT MENÜ -->
-    <nav id="bottomNav" class="hidden fixed bottom-0 left-0 right-0 max-w-md mx-auto glass border-t border-white/10 px-6 py-3 flex justify-between items-center z-30">
-        <button onclick="switchTab('home', this)" class="nav-btn text-rose-400 flex flex-col items-center gap-1">
-            <i class="fa-solid fa-house text-lg"></i>
+    <nav id="bottomNav" class="hidden fixed bottom-0 left-0 right-0 max-w-md mx-auto glass border-t border-amber-500/20 px-3 py-3 flex justify-between items-center z-30">
+        <button onclick="switchTab('home', this)" class="nav-btn text-amber-400 flex flex-col items-center gap-1 px-1">
+            <i class="fa-solid fa-house text-base"></i>
             <span class="text-[10px] font-semibold">Biz</span>
         </button>
-        <button onclick="switchTab('letters', this)" class="nav-btn text-white/50 flex flex-col items-center gap-1">
-            <i class="fa-solid fa-envelope text-lg"></i>
-            <span class="text-[10px] font-semibold">Mektuplar</span>
+        <button onclick="switchTab('memories', this)" class="nav-btn text-amber-100/50 flex flex-col items-center gap-1 px-1">
+            <i class="fa-solid fa-images text-base"></i>
+            <span class="text-[10px] font-semibold">Anılar</span>
         </button>
-        <button onclick="switchTab('bucket', this)" class="nav-btn text-white/50 flex flex-col items-center gap-1">
-            <i class="fa-solid fa-list-check text-lg"></i>
-            <span class="text-[10px] font-semibold">Hayaller</span>
+        <button onclick="switchTab('letters', this)" class="nav-btn text-amber-100/50 flex flex-col items-center gap-1 px-1">
+            <i class="fa-solid fa-envelope text-base"></i>
+            <span class="text-[10px] font-semibold">Mektup</span>
         </button>
-        <button onclick="switchTab('games', this)" class="nav-btn text-white/50 flex flex-col items-center gap-1">
-            <i class="fa-solid fa-wand-magic-sparkles text-lg"></i>
-            <span class="text-[10px] font-semibold">Çark</span>
+        <button onclick="switchTab('bucket', this)" class="nav-btn text-amber-100/50 flex flex-col items-center gap-1 px-1">
+            <i class="fa-solid fa-list-check text-base"></i>
+            <span class="text-[10px] font-semibold">Hayal</span>
+        </button>
+        <button onclick="switchTab('places', this)" class="nav-btn text-amber-100/50 flex flex-col items-center gap-1 px-1">
+            <i class="fa-solid fa-location-dot text-base"></i>
+            <span class="text-[10px] font-semibold">Yerler</span>
         </button>
     </nav>
 
@@ -319,6 +362,23 @@
         const CORRECT_PIN = "0911";
         let currentUser = "";
         let isPlaying = false;
+
+        const syncChannel = ('BroadcastChannel' in window) ? new BroadcastChannel('kadir_sude_sync') : null;
+        if (syncChannel) {
+            syncChannel.onmessage = (event) => {
+                if (event.data && event.data.type === 'places_updated') {
+                    places = JSON.parse(localStorage.getItem('ks_places_shared') || '[]');
+                    renderPlaces();
+                }
+            };
+        }
+
+        window.addEventListener('storage', (e) => {
+            if (e.key === 'ks_places_shared') {
+                places = JSON.parse(e.newValue || '[]');
+                renderPlaces();
+            }
+        });
 
         function enterPin(num) {
             if (currentPin.length < 4) {
@@ -356,11 +416,19 @@
 
         function selectProfile(name) {
             currentUser = name;
+            localStorage.setItem('ks_active_user', name);
             document.getElementById('currentUserBadge').innerText = name;
             document.getElementById('profileScreen').classList.add('hidden');
             document.getElementById('mainApp').classList.remove('hidden');
             document.getElementById('bottomNav').classList.remove('hidden');
             renderGoals();
+            renderPlaces();
+            renderMemories();
+        }
+
+        function switchProfileQuick() {
+            const nextUser = currentUser === 'Kadir' ? 'Sude' : 'Kadir';
+            selectProfile(nextUser);
         }
 
         function startMusic() {
@@ -404,10 +472,10 @@
         }, 1000);
 
         const quotes = [
-            "İki yılımız geçti ama sana her baktığımda kalbim hala 9 Kasım 2024'teki ilk günkü gibi atıyor Sude.",
-            "Seninle geçen her gün, hayatımın en güzel hikayesi.",
-            "İyi ki hayatıma girdin, iyi ki benimsin. Nice senelerimize sevgilim!",
-            "Gülüşün dünyadaki en güzel manzara..."
+            "İki yılımız geçti ama sana her baktığımda kalbim hala 9 Kasım 2024'teki ilk günkü gibi atıyor, aşkım.",
+            "Seninle geçen her gün, hayatımın en güzel hikayesi yavrum.",
+            "İyi ki hayatıma girdin, iyi ki benimsin dudu'm. Nice senelerimize!",
+            "Mızmızlandığında bile en tatlı halinle kalbimi eritiyorsun, cimcime."
         ];
         let quoteIdx = 0;
         function nextQuote() {
@@ -419,7 +487,7 @@
             for (let i = 0; i < 8; i++) {
                 const heart = document.createElement('div');
                 heart.className = 'floating-heart text-2xl';
-                heart.innerText = '❤️';
+                heart.innerText = '🤎';
                 heart.style.left = Math.random() * 80 + 10 + '%';
                 heart.style.animationDuration = (Math.random() * 1.5 + 1.5) + 's';
                 document.body.appendChild(heart);
@@ -427,18 +495,101 @@
             }
             const history = document.getElementById('pingHistory');
             const time = new Date().toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit' });
-            history.innerHTML = `<div class="glass px-3 py-2 rounded-xl flex justify-between"><span><b>${currentUser}:</b> ${text}</span><span class="text-white/40">${time}</span></div>` + history.innerHTML;
+            history.innerHTML = `<div class="glass px-3 py-2 rounded-xl flex justify-between"><span><b>${currentUser || 'Biz'}:</b> ${text}</span><span class="text-amber-200/45">${time}</span></div>` + history.innerHTML;
+        }
+
+        // Anılarımız Galeri Listesi (30 Fotoğraf)
+        const memories = [
+            { src: "foto1.jpg", caption: "Çiçeklerin yanında yan yana gülüşümüz, yavrum." },
+            { src: "foto2.jpg", caption: "Gece ışıklarında su kenarında en tatlı dudu'm." },
+            { src: "foto3.jpg", caption: "Boğaz manzarasında şala sarılıp el ele tutuştuğumuz an." },
+            { src: "foto4.jpg", caption: "Deniz ve köprü önünde huzur dolu bir kare, aşkım." },
+            { src: "foto5.jpg", caption: "Güneşli bir sahil gününde cimcime gülüşün." },
+            { src: "foto6.jpg", caption: "Çiçek buketiyle sahil yürüyüşümüzün en güzel anı." },
+            { src: "foto7.jpg", caption: "Kubbe ve ışıklar altında sessiz, derin bir huzur." },
+            { src: "foto8.jpg", caption: "Sahil boyunca sarılıp yürüdüğümüz o güzel gün." },
+            { src: "foto9.jpg", caption: "Gece Boğaz'da köprü ışıkları altında sımsıkı." },
+            { src: "foto10.jpg", caption: "Yolda giderken bile neşemiz hiç eksik değil." },
+            { src: "foto11.jpg", caption: "Renkli ışıklar altında eğlence turu, mızmızım." },
+            { src: "foto12.jpg", caption: "Ayna karşısında yan yana en sevdiğim sarılma." },
+            { src: "foto13.jpg", caption: "Gece şemsiyenin altında baş başa bir an." },
+            { src: "foto14.jpg", caption: "Köprü manzarasına karşı iki kalp tek nefes." },
+            { src: "foto15.jpg", caption: "Gece ışıkları altında elini hiç bırakmadığım an." },
+            { src: "foto16.jpg", caption: "Sıcak ışıklı masada tatlı sohbet ve gülüşün." },
+            { src: "foto17.jpg", caption: "Cam tavanlı yolculukta neşeli bir kare, aşkım." },
+            { src: "foto18.jpg", caption: "Buz gibi ortamda sıcacık gülümseyen dudu'm." },
+            { src: "foto19.jpg", caption: "Yeşilliklerin altında sarıldığımız en tatlı anlardan." },
+            { src: "foto20.jpg", caption: "Açık havada enerjisi hiç bitmeyen cimcime'm." },
+            { src: "foto21.jpg", caption: "Otoparkta bile el sallarken bu kadar tatlı olunur mu?" },
+            { src: "foto22.jpg", caption: "Sinema kolajında kahkahalarımız ve sarılışımız." },
+            { src: "foto23.jpg", caption: "Beyaz şapkanla mağazada en sevimli halin." },
+            { src: "foto24.jpg", caption: "Çay, kahve ve tatlı eşliğinde keyifli bir akşam." },
+            { src: "foto25.jpg", caption: "Şehir manzarasına karşı güneşli bir gün." },
+            { src: "foto26.jpg", caption: "Yeşilliklerin önünde öpücükle biten tatlı an." },
+            { src: "foto27.jpg", caption: "Boğaz'da gece kolajından unutulmaz kareler." },
+            { src: "foto28.jpg", caption: "Neon ışıklı aynada 'now or never' anımız." },
+            { src: "foto29.jpg", caption: "Sahil kenarında yan yana huzurlu bir akşamüstü." },
+            { src: "foto30.jpg", caption: "Göl kenarındaki ahşap iskelede birlikte, sonsuza dek." }
+        ];
+
+        function renderMemories() {
+            const gallery = document.getElementById('memoryGallery');
+            if (!gallery) return;
+            gallery.innerHTML = memories.map((m, idx) => `
+                <div onclick="openPhotoModal(${idx})" class="glass rounded-2xl overflow-hidden cursor-pointer active:scale-98 transition group">
+                    <div class="aspect-square w-full overflow-hidden bg-black/40">
+                        <img src="${m.src}" alt="Anı ${idx + 1}" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="p-2.5">
+                        <p class="text-[11px] text-amber-100/85 line-clamp-2 leading-snug">${m.caption}</p>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function openPhotoModal(idx) {
+            const item = memories[idx];
+            document.getElementById('modalPhotoImg').src = item.src;
+            document.getElementById('modalPhotoCaption').innerText = `"${item.caption}"`;
+            document.getElementById('photoModal').classList.remove('hidden');
+        }
+
+        function closePhotoModal() {
+            document.getElementById('photoModal').classList.add('hidden');
+        }
+
+        // "Beni Çok Özlediğinde Aç" için değiştirilebilir sözler
+        const missYouQuotes = [
+            "Şu an yanında olamasam da aklımın ve kalbimin her saniye seninle olduğunu bil yavrum. Gözlerini kapat ve sımsıkı sarıldığımız o anı düşün.",
+            "Özlemin içimde kocaman bir yer tutuyor aşkım. En kısa zamanda buluşup dudu'mu doyasıya öpeceğim, az kaldı!",
+            "Uzakta da olsak kalbim hep senin yanında cimcime. Birazdan gelip mızmızlandığın her şeyi unutturacağım sana.",
+            "Sesini duymak, gözlerinin içine bakmak en büyük huzurum. Seni her şeyden çok seviyorum yavrum, az daha sabret aşkım."
+        ];
+        let missYouIdx = 0;
+
+        function openMissYouLetter() {
+            missYouIdx = 0;
+            document.getElementById('letterTitle').innerText = "Beni Çok Özlediğinde...";
+            document.getElementById('letterBody').innerText = `"${missYouQuotes[missYouIdx]}"`;
+            document.getElementById('nextMissYouBtn').classList.remove('hidden');
+            document.getElementById('letterModal').classList.remove('hidden');
+        }
+
+        function cycleMissYouQuote() {
+            missYouIdx = (missYouIdx + 1) % missYouQuotes.length;
+            document.getElementById('letterBody').innerText = `"${missYouQuotes[missYouIdx]}"`;
         }
 
         const letters = [
-            { title: "Beni Çok Özlediğinde...", body: "Şu an yanında olamasam da aklımın ve kalbimin her saniye seninle olduğunu bil. Gözlerini kapat ve en güzel anımızı düşün. En kısa zamanda sımsıkı sarılacağız sevgilim. Seni çok seviyorum!" },
-            { title: "Gülümsemeye İhtiyacın Olduğunda...", body: "Dünyanın en güzel gülüşüne sahip kadınının üzülmesine hiç dayanamam. Ne olursa olsun her zaman arkanda ve yanındayım. Şimdi derin bir nefes al ve o güzel yüzünü güldür!" },
-            { title: "2. Yıl Dönümümüz Kutlu Olsun!", body: "9 Kasım 2024'te başlayan bu yolculukta tam 2 yılı geride bıraktık. Seninle büyümek, gülmek ve her anı paylaşmak hayatımın en büyük şansı. İlk günkü gibi, sonsuza dek..." }
+            null,
+            { title: "Gülümsemeye İhtiyacın Olduğunda...", body: "Mızmızlandığın anlarda bile dünyanın en güzel dudu'su sensin. Ne olursa olsun her zaman arkanda ve yanındayım aşkım. Şimdi derin bir nefes al ve o cimcime yüzünü güldür!" },
+            { title: "2. Yıl Dönümümüz Kutlu Olsun!", body: "9 Kasım 2024'te başlayan bu yolculukta tam 2 yılı geride bıraktık yavrum. Seninle büyümek, gülmek ve her anı paylaşmak hayatımın en büyük şansı. İlk günkü gibi, sonsuza dek..." }
         ];
 
         function openLetter(idx) {
             document.getElementById('letterTitle').innerText = letters[idx].title;
             document.getElementById('letterBody').innerText = letters[idx].body;
+            document.getElementById('nextMissYouBtn').classList.add('hidden');
             document.getElementById('letterModal').classList.remove('hidden');
         }
         function closeLetter() {
@@ -455,10 +606,10 @@
             const list = document.getElementById('goalList');
             list.innerHTML = goals.map((g, i) => `
                 <div onclick="toggleGoal(${i})" class="glass-card p-4 rounded-2xl flex items-center gap-3 cursor-pointer">
-                    <div class="w-6 h-6 rounded-full border-2 ${g.done ? 'bg-rose-500 border-rose-500' : 'border-white/30'} flex items-center justify-center text-xs">
+                    <div class="w-6 h-6 rounded-full border-2 ${g.done ? 'bg-amber-600 border-amber-500' : 'border-amber-200/30'} flex items-center justify-center text-xs">
                         ${g.done ? '<i class="fa-solid fa-check"></i>' : ''}
                     </div>
-                    <span class="text-sm ${g.done ? 'line-through text-white/40' : ''}">${g.text}</span>
+                    <span class="text-sm ${g.done ? 'line-through text-amber-100/40' : 'text-amber-50'}">${g.text}</span>
                 </div>
             `).join('');
             localStorage.setItem('ks_goals', JSON.stringify(goals));
@@ -478,30 +629,78 @@
             renderGoals();
         }
 
-        const wheelOptions = [
-            "Akşam Yemeği Benden 🍝",
-            "Uzun Gece Yürüyüşü 🌙",
-            "Film Gecesi & Mısır 🍿",
-            "Kahve & Tatlı Kaçamağı ☕",
-            "10 Dakika Masaj Hakkı 💆‍♀️",
-            "Sürpriz Hediye 🎁"
-        ];
+        // Gidilecek Yerler (Başlangıçta boş; Kadir ve Sude arasında ortak senkronize)
+        let places = JSON.parse(localStorage.getItem('ks_places_shared') || '[]');
 
-        function spinWheel() {
-            const res = document.getElementById('wheelResult');
-            let count = 0;
-            const interval = setInterval(() => {
-                res.innerText = wheelOptions[Math.floor(Math.random() * wheelOptions.length)];
-                count++;
-                if (count > 15) clearInterval(interval);
-            }, 80);
+        function saveAndSyncPlaces() {
+            localStorage.setItem('ks_places_shared', JSON.stringify(places));
+            if (syncChannel) {
+                syncChannel.postMessage({ type: 'places_updated' });
+            }
+            renderPlaces();
+        }
+
+        function renderPlaces() {
+            const list = document.getElementById('placeList');
+            if (!list) return;
+
+            if (places.length === 0) {
+                list.innerHTML = `<div class="glass p-5 rounded-2xl text-center text-xs text-amber-200/55">Henüz gidilecek yer eklenmemiş. İlk yeri sen ekle, aşkım!</div>`;
+                return;
+            }
+
+            list.innerHTML = places.map((p, i) => `
+                <div class="glass p-3.5 rounded-2xl flex items-center justify-between gap-3">
+                    <div onclick="togglePlace(${i})" class="flex items-center gap-3 cursor-pointer flex-1">
+                        <div class="w-6 h-6 rounded-full border-2 ${p.visited ? 'bg-amber-600 border-amber-500' : 'border-amber-200/35'} flex items-center justify-center text-xs">
+                            ${p.visited ? '<i class="fa-solid fa-check"></i>' : '<i class="fa-solid fa-location-dot text-[10px] text-amber-300"></i>'}
+                        </div>
+                        <div>
+                            <div class="text-sm ${p.visited ? 'line-through text-amber-100/40' : 'text-amber-50 font-medium'}">${p.name}</div>
+                            <div class="text-[10px] text-amber-200/50">Ekleyen: ${p.addedBy || 'Biz'}</div>
+                        </div>
+                    </div>
+                    <button onclick="deletePlace(${i})" class="text-amber-200/40 hover:text-amber-200 p-1.5" title="Sil">
+                        <i class="fa-solid fa-trash-can text-xs"></i>
+                    </button>
+                </div>
+            `).join('');
+        }
+
+        function addPlace() {
+            const input = document.getElementById('newPlaceInput');
+            const val = input.value.trim();
+            if (val) {
+                places.unshift({
+                    name: val,
+                    visited: false,
+                    addedBy: currentUser || 'Kadir'
+                });
+                input.value = "";
+                saveAndSyncPlaces();
+            }
+        }
+
+        function togglePlace(i) {
+            places[i].visited = !places[i].visited;
+            saveAndSyncPlaces();
+        }
+
+        function deletePlace(i) {
+            places.splice(i, 1);
+            saveAndSyncPlaces();
         }
 
         function switchTab(tabName, btn) {
             document.querySelectorAll('.tab-content').forEach(t => t.classList.add('hidden'));
             document.getElementById('tab-' + tabName).classList.remove('hidden');
-            document.querySelectorAll('.nav-btn').forEach(b => b.classList.replace('text-rose-400', 'text-white/50'));
-            btn.classList.replace('text-white/50', 'text-rose-400');
+            document.querySelectorAll('.nav-btn').forEach(b => b.classList.replace('text-amber-400', 'text-amber-100/50'));
+            btn.classList.replace('text-amber-100/50', 'text-amber-400');
+            if (tabName === 'places') {
+                renderPlaces();
+            } else if (tabName === 'memories') {
+                renderMemories();
+            }
         }
     </script>
 </body>
