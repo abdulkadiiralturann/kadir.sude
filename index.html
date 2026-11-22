@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Kadir ❤️ Sude">
+    <title>Kadir ❤️ Sude - 2. Yıl Dönümümüz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap');
+        
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: linear-gradient(135deg, #1a0b1c 0%, #2d122b 50%, #160c1f 100%);
+            color: #fff;
+            min-height: 100vh;
+            overflow-x: hidden;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .serif-font { font-family: 'Playfair Display', serif; }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.07);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .glass-card {
+            background: linear-gradient(145deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.03) 100%);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.35);
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(0) scale(0.8); opacity: 1; }
+            100% { transform: translateY(-350px) scale(1.5); opacity: 0; }
+        }
+
+        .floating-heart {
+            position: fixed;
+            bottom: 80px;
+            pointer-events: none;
+            animation: floatUp 2.5s ease-out forwards;
+            z-index: 9999;
+        }
+
+        @keyframes spinSlow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .vinyl-spin { animation: spinSlow 6s linear infinite; }
+        .vinyl-paused { animation-play-state: paused; }
+
+        .pin-dot { transition: all 0.2s ease; }
+        .pin-dot.active {
+            background-color: #f43f5e;
+            transform: scale(1.25);
+            box-shadow: 0 0 12px #f43f5e;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-8px); }
+            75% { transform: translateX(8px); }
+        }
+        .shake { animation: shake 0.3s ease-in-out; }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-center">
+
+    <!-- 1. KİLİT EKRANI -->
+    <div id="lockScreen" class="fixed inset-0 z-50 flex flex-col items-center justify-center p-6 bg-gradient-to-b from-[#1a0b1c] to-[#0f0611]">
+        <div class="w-20 h-20 rounded-full glass-card flex items-center justify-center mb-6 shadow-lg shadow-rose-500/20">
+            <i class="fa-solid fa-heart text-3xl text-rose-500 animate-pulse"></i>
+        </div>
+        <h1 class="serif-font text-3xl font-bold mb-1 tracking-wide">Kadir & Sude</h1>
+        <p class="text-rose-200/70 text-sm mb-8">Özel dünyamıza girmek için şifreyi gir</p>
+
+        <div id="pinDots" class="flex gap-4 mb-8">
+            <div class="pin-dot w-4 h-4 rounded-full border-2 border-rose-400/50"></div>
+            <div class="pin-dot w-4 h-4 rounded-full border-2 border-rose-400/50"></div>
+            <div class="pin-dot w-4 h-4 rounded-full border-2 border-rose-400/50"></div>
+            <div class="pin-dot w-4 h-4 rounded-full border-2 border-rose-400/50"></div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-4 max-w-[260px] w-full">
+            <button onclick="enterPin('1')" class="glass h-16 rounded-2xl text-2xl font-semibold active:bg-rose-500/30 transition">1</button>
+            <button onclick="enterPin('2')" class="glass h-16 rounded-2xl text-2xl font-semibold active:bg-rose-500/30 transition">2</button>
+            <button onclick="enterPin('3')" class="glass h-16 rounded-2xl text-2xl font-semibold active:bg-rose-500/30 transition">3</button>
+            <button onclick="enterPin('4')" class="glass h-16 rounded-2xl text-2xl font-semibold active:bg-rose-500/30 transition">4</button>
+            <button onclick="enterPin('5')" class="glass h-16 rounded-2xl text-2xl font-semibold active:bg-rose-500/30 transition">5</button>
+            <button onclick="enterPin('6')" class="glass h-16 rounded-2xl text-2xl font-semibold active:bg-rose-500/30 transition">6</button>
+            <button onclick="enterPin('7')" class="glass h-16 rounded-2xl text-2xl font-semibold active:bg-rose-500/30 transition">7</button>
+            <button onclick="enterPin('8')" class="glass h-16 rounded-2xl text-2xl font-semibold active:bg-rose-500/30 transition">8</button>
+            <button onclick="enterPin('9')" class="glass h-16 rounded-2xl text-2xl font-semibold active:bg-rose-500/30 transition">9</button>
+            <div class="h-16"></div>
+            <button onclick="enterPin('0')" class="glass h-16 rounded-2xl text-2xl font-semibold active:bg-rose-500/30 transition">0</button>
+            <button onclick="deletePin()" class="glass h-16 rounded-2xl text-xl text-rose-300 active:bg-rose-500/30 transition"><i class="fa-solid fa-delete-left"></i></button>
+        </div>
+        <p class="text-xs text-white/30 mt-8">İpucu: Başlangıç günümüz ve ayımız (0911)</p>
+    </div>
+
+    <!-- 2. PROFİL SEÇİM EKRANI -->
+    <div id="profileScreen" class="hidden fixed inset-0 z-40 flex flex-col items-center justify-center p-6 bg-gradient-to-b from-[#1a0b1c] to-[#0f0611]">
+        <h2 class="serif-font text-2xl font-bold mb-2">Kim Giriş Yapıyor?</h2>
+        <p class="text-sm text-rose-200/70 mb-8">Bildirimlerin doğru gitmesi için profilini seç</p>
+        <div class="flex gap-6">
+            <button onclick="selectProfile('Kadir')" class="glass-card p-6 rounded-3xl flex flex-col items-center w-36 hover:border-rose-500 transition active:scale-95">
+                <div class="w-16 h-16 rounded-full bg-gradient-to-tr from-blue-500 to-indigo-600 flex items-center justify-center text-2xl font-bold mb-3 shadow-lg">K</div>
+                <span class="font-bold text-lg">Kadir</span>
+            </button>
+            <button onclick="selectProfile('Sude')" class="glass-card p-6 rounded-3xl flex flex-col items-center w-36 hover:border-rose-500 transition active:scale-95">
+                <div class="w-16 h-16 rounded-full bg-gradient-to-tr from-rose-500 to-pink-500 flex items-center justify-center text-2xl font-bold mb-3 shadow-lg">S</div>
+                <span class="font-bold text-lg">Sude</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- 3. ANA UYGULAMA EKRANI -->
+    <div id="mainApp" class="hidden w-full max-w-md min-h-screen pb-24 pt-6 px-4 flex flex-col">
+        
+        <!-- Üst Bar & Müzik Çalar -->
+        <div class="glass-card rounded-2xl p-3 mb-5 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div id="vinylDisc" class="w-10 h-10 rounded-full bg-gradient-to-tr from-rose-600 to-amber-500 flex items-center justify-center shadow-md vinyl-spin">
+                    <i class="fa-solid fa-music text-xs text-white"></i>
+                </div>
+                <div>
+                    <div class="text-xs font-bold text-rose-300">Sezen Aksu</div>
+                    <div class="text-sm font-semibold">İlk Günki Gibi</div>
+                </div>
+            </div>
+            <div class="flex items-center gap-2">
+                <button onclick="toggleMusic()" id="musicBtn" class="w-9 h-9 rounded-full bg-rose-500/20 text-rose-400 flex items-center justify-center hover:bg-rose-500 hover:text-white transition">
+                    <i class="fa-solid fa-pause"></i>
+                </button>
+                <span id="currentUserBadge" class="text-xs px-2.5 py-1 rounded-full bg-white/10 font-medium"></span>
+            </div>
+        </div>
+
+        <!-- Gizli Ses & Yedek YouTube Oynatıcı -->
+        <audio id="bgAudio" loop>
+            <source src="sarkimiz.mp3" type="audio/mpeg">
+        </audio>
+        <div id="ytFallback" class="hidden"></div>
+
+        <!-- SEKME 1: ANA SAYFA -->
+        <div id="tab-home" class="tab-content space-y-5">
+            <!-- 2. Yıl Dönümü Kartı -->
+            <div class="glass-card rounded-3xl p-6 text-center relative overflow-hidden">
+                <div class="inline-block px-3 py-1 rounded-full bg-rose-500/20 text-rose-300 text-xs font-semibold mb-2">
+                    <i class="fa-solid fa-sparkles mr-1"></i> 2. Yıl Dönümümüz Kutlu Olsun
+                </div>
+                <h1 class="serif-font text-2xl font-bold mb-1">Kadir ❤️ Sude</h1>
+                <p class="text-xs text-white/60 mb-5">09 Kasım 2024'ten beri seninle her an...</p>
+
+                <div class="grid grid-cols-4 gap-2 text-center">
+                    <div class="glass rounded-2xl p-2.5">
+                        <div id="days" class="text-xl font-extrabold text-rose-400">0</div>
+                        <div class="text-[10px] text-white/60 uppercase">Gün</div>
+                    </div>
+                    <div class="glass rounded-2xl p-2.5">
+                        <div id="hours" class="text-xl font-extrabold text-rose-400">0</div>
+                        <div class="text-[10px] text-white/60 uppercase">Saat</div>
+                    </div>
+                    <div class="glass rounded-2xl p-2.5">
+                        <div id="minutes" class="text-xl font-extrabold text-rose-400">0</div>
+                        <div class="text-[10px] text-white/60 uppercase">Dakika</div>
+                    </div>
+                    <div class="glass rounded-2xl p-2.5">
+                        <div id="seconds" class="text-xl font-extrabold text-rose-400">0</div>
+                        <div class="text-[10px] text-white/60 uppercase">Saniye</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Günün Sözü -->
+            <div class="glass-card rounded-3xl p-5">
+                <div class="flex items-center justify-between mb-2">
+                    <span class="text-xs font-bold text-rose-300 uppercase tracking-wider"><i class="fa-solid fa-quote-left mr-1"></i> Senin İçin Notum</span>
+                    <button onclick="nextQuote()" class="text-xs text-white/50 hover:text-white"><i class="fa-solid fa-rotate"></i> Değiştir</button>
+                </div>
+                <p id="dailyQuote" class="serif-font italic text-base text-white/90 leading-relaxed">
+                    "İki yılımız geçti ama sana her baktığımda kalbim hala 9 Kasım 2024'teki ilk günkü gibi atıyor Sude."
+                </p>
+            </div>
+
+            <!-- Hızlı Bildirim Butonları -->
+            <div class="glass-card rounded-3xl p-5">
+                <h3 class="text-xs font-bold text-white/70 uppercase tracking-wider mb-3">Tek Tuşla Haber Ver</h3>
+                <div class="grid grid-cols-2 gap-3">
+                    <button onclick="sendPing('Seni çok özledim ❤️')" class="bg-gradient-to-r from-rose-500 to-pink-600 p-3.5 rounded-2xl font-bold text-sm shadow-lg shadow-rose-500/30 active:scale-95 transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-heart"></i> Seni Özledim
+                    </button>
+                    <button onclick="sendPing('Bugün buluşalım mı? 🥺')" class="glass p-3.5 rounded-2xl font-semibold text-sm hover:bg-white/10 active:scale-95 transition flex items-center justify-center gap-2 text-center leading-tight">
+                        🥺 Bugün buluşalım mı?
+                    </button>
+                    <a href="tel:+905462427813" onclick="sendPing('Arama başlatıldı 📞 (0546 242 78 13)')" class="glass p-3.5 rounded-2xl font-semibold text-sm hover:bg-white/10 active:scale-95 transition flex flex-col items-center justify-center gap-0.5 text-white no-underline">
+                        <span>📞 Beni Ara</span>
+                        <span class="text-[11px] text-rose-300/90 font-normal">0546 242 78 13</span>
+                    </a>
+                    <button onclick="sendPing('Kahve içelim mi? ☕')" class="glass p-3.5 rounded-2xl font-semibold text-sm hover:bg-white/10 active:scale-95 transition flex items-center justify-center gap-2">
+                        ☕ Kahve?
+                    </button>
+                </div>
+                <div id="pingHistory" class="mt-4 space-y-1.5 text-xs text-white/70"></div>
+            </div>
+        </div>
+
+        <!-- SEKME 2: MEKTUPLAR -->
+        <div id="tab-letters" class="tab-content hidden space-y-4">
+            <h2 class="serif-font text-2xl font-bold mb-1">Ne Zaman Açmalısın?</h2>
+            <p class="text-xs text-white/60 mb-4">Hangi ruh halindeysen o zarfa dokun...</p>
+
+            <div onclick="openLetter(0)" class="glass-card p-5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-98 transition">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-2xl bg-rose-500/20 text-rose-400 flex items-center justify-center text-xl"><i class="fa-solid fa-envelope-open-text"></i></div>
+                    <div>
+                        <div class="font-bold">Beni Çok Özlediğinde Aç</div>
+                        <div class="text-xs text-white/50">Yanında olamadığım anlar için...</div>
+                    </div>
+                </div>
+                <i class="fa-solid fa-chevron-right text-white/30"></i>
+            </div>
+
+            <div onclick="openLetter(1)" class="glass-card p-5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-98 transition">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-2xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-xl"><i class="fa-solid fa-face-smile-beam"></i></div>
+                    <div>
+                        <div class="font-bold">Gülümsemeye İhtiyacın Olduğunda</div>
+                        <div class="text-xs text-white/50">Keyfin biraz kaçtıysa buraya tıkla</div>
+                    </div>
+                </div>
+                <i class="fa-solid fa-chevron-right text-white/30"></i>
+            </div>
+
+            <div onclick="openLetter(2)" class="glass-card p-5 rounded-2xl flex items-center justify-between cursor-pointer active:scale-98 transition">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 rounded-2xl bg-purple-500/20 text-purple-400 flex items-center justify-center text-xl"><i class="fa-solid fa-star"></i></div>
+                    <div>
+                        <div class="font-bold">2. Yıl Dönümü Mektubum</div>
+                        <div class="text-xs text-white/50">09.11.2026 özel notum</div>
+                    </div>
+                </div>
+                <i class="fa-solid fa-chevron-right text-white/30"></i>
+            </div>
+        </div>
+
+        <!-- SEKME 3: HAYALLERİMİZ -->
+        <div id="tab-bucket" class="tab-content hidden space-y-4">
+            <h2 class="serif-font text-2xl font-bold mb-1">Ortak Hayallerimiz</h2>
+            <p class="text-xs text-white/60 mb-3">Birlikte gerçekleştireceğimiz hedefler</p>
+
+            <div class="flex gap-2 mb-4">
+                <input id="newGoalInput" type="text" placeholder="Yeni bir hayal ekle..." class="glass flex-1 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-rose-500">
+                <button onclick="addGoal()" class="bg-rose-500 px-4 rounded-xl font-bold text-sm"><i class="fa-solid fa-plus"></i></button>
+            </div>
+
+            <div id="goalList" class="space-y-2.5"></div>
+        </div>
+
+        <!-- SEKME 4: EĞLENCE & ÇARK -->
+        <div id="tab-games" class="tab-content hidden space-y-5">
+            <div class="glass-card rounded-3xl p-6 text-center">
+                <h2 class="serif-font text-2xl font-bold mb-1">Bugün Ne Yapalım?</h2>
+                <p class="text-xs text-white/60 mb-6">Kararsız kaldığımızda şans çarkını çevir!</p>
+
+                <div class="w-48 h-48 mx-auto rounded-full border-4 border-rose-500/50 glass flex items-center justify-center p-4 mb-6 shadow-xl shadow-rose-500/10">
+                    <div id="wheelResult" class="font-bold text-lg text-rose-300">Çarkı Çevir! 🎡</div>
+                </div>
+
+                <button onclick="spinWheel()" class="w-full bg-gradient-to-r from-rose-500 to-purple-600 py-3.5 rounded-2xl font-bold shadow-lg active:scale-95 transition">
+                    Şansımızı Dene
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- MEKTUP OKUMA MODALI -->
+    <div id="letterModal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-6">
+        <div class="glass-card max-w-sm w-full rounded-3xl p-6 relative">
+            <button onclick="closeLetter()" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/10 flex items-center justify-center"><i class="fa-solid fa-xmark"></i></button>
+            <h3 id="letterTitle" class="serif-font text-xl font-bold text-rose-300 mb-3"></h3>
+            <p id="letterBody" class="text-sm text-white/90 leading-relaxed whitespace-pre-line"></p>
+        </div>
+    </div>
+
+    <!-- ALT MENÜ -->
+    <nav id="bottomNav" class="hidden fixed bottom-0 left-0 right-0 max-w-md mx-auto glass border-t border-white/10 px-6 py-3 flex justify-between items-center z-30">
+        <button onclick="switchTab('home', this)" class="nav-btn text-rose-400 flex flex-col items-center gap-1">
+            <i class="fa-solid fa-house text-lg"></i>
+            <span class="text-[10px] font-semibold">Biz</span>
+        </button>
+        <button onclick="switchTab('letters', this)" class="nav-btn text-white/50 flex flex-col items-center gap-1">
+            <i class="fa-solid fa-envelope text-lg"></i>
+            <span class="text-[10px] font-semibold">Mektuplar</span>
+        </button>
+        <button onclick="switchTab('bucket', this)" class="nav-btn text-white/50 flex flex-col items-center gap-1">
+            <i class="fa-solid fa-list-check text-lg"></i>
+            <span class="text-[10px] font-semibold">Hayaller</span>
+        </button>
+        <button onclick="switchTab('games', this)" class="nav-btn text-white/50 flex flex-col items-center gap-1">
+            <i class="fa-solid fa-wand-magic-sparkles text-lg"></i>
+            <span class="text-[10px] font-semibold">Çark</span>
+        </button>
+    </nav>
+
+    <script>
+        let currentPin = "";
+        const CORRECT_PIN = "0911";
+        let currentUser = "";
+        let isPlaying = false;
+
+        function enterPin(num) {
+            if (currentPin.length < 4) {
+                currentPin += num;
+                updatePinDots();
+                if (currentPin.length === 4) {
+                    if (currentPin === CORRECT_PIN) {
+                        startMusic();
+                        document.getElementById('lockScreen').classList.add('hidden');
+                        document.getElementById('profileScreen').classList.remove('hidden');
+                    } else {
+                        const dots = document.getElementById('pinDots');
+                        dots.classList.add('shake');
+                        setTimeout(() => {
+                            dots.classList.remove('shake');
+                            currentPin = "";
+                            updatePinDots();
+                        }, 400);
+                    }
+                }
+            }
+        }
+
+        function deletePin() {
+            currentPin = currentPin.slice(0, -1);
+            updatePinDots();
+        }
+
+        function updatePinDots() {
+            const dots = document.querySelectorAll('.pin-dot');
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index < currentPin.length);
+            });
+        }
+
+        function selectProfile(name) {
+            currentUser = name;
+            document.getElementById('currentUserBadge').innerText = name;
+            document.getElementById('profileScreen').classList.add('hidden');
+            document.getElementById('mainApp').classList.remove('hidden');
+            document.getElementById('bottomNav').classList.remove('hidden');
+            renderGoals();
+        }
+
+        function startMusic() {
+            const audio = document.getElementById('bgAudio');
+            audio.play().then(() => {
+                isPlaying = true;
+            }).catch(() => {
+                document.getElementById('ytFallback').innerHTML = `<iframe width="0" height="0" src="https://www.youtube.com/embed/5bB4H238b3w?autoplay=1&loop=1&playlist=5bB4H238b3w" allow="autoplay"></iframe>`;
+                isPlaying = true;
+            });
+        }
+
+        function toggleMusic() {
+            const audio = document.getElementById('bgAudio');
+            const disc = document.getElementById('vinylDisc');
+            const btn = document.getElementById('musicBtn');
+            const yt = document.getElementById('ytFallback');
+
+            if (isPlaying) {
+                audio.pause();
+                yt.innerHTML = "";
+                disc.classList.add('vinyl-paused');
+                btn.innerHTML = '<i class="fa-solid fa-play"></i>';
+                isPlaying = false;
+            } else {
+                startMusic();
+                disc.classList.remove('vinyl-paused');
+                btn.innerHTML = '<i class="fa-solid fa-pause"></i>';
+            }
+        }
+
+        // Canlı Sayaç (09 Kasım 2024)
+        const startDate = new Date("2024-11-09T00:00:00").getTime();
+        setInterval(() => {
+            const now = new Date().getTime();
+            const diff = now - startDate;
+            document.getElementById('days').innerText = Math.floor(diff / (1000 * 60 * 60 * 24));
+            document.getElementById('hours').innerText = Math.floor((diff / (1000 * 60 * 60)) % 24);
+            document.getElementById('minutes').innerText = Math.floor((diff / 1000 / 60) % 60);
+            document.getElementById('seconds').innerText = Math.floor((diff / 1000) % 60);
+        }, 1000);
+
+        const quotes = [
+            "İki yılımız geçti ama sana her baktığımda kalbim hala 9 Kasım 2024'teki ilk günkü gibi atıyor Sude.",
+            "Seninle geçen her gün, hayatımın en güzel hikayesi.",
+            "İyi ki hayatıma girdin, iyi ki benimsin. Nice senelerimize sevgilim!",
+            "Gülüşün dünyadaki en güzel manzara..."
+        ];
+        let quoteIdx = 0;
+        function nextQuote() {
+            quoteIdx = (quoteIdx + 1) % quotes.length;
+            document.getElementById('dailyQuote').innerText = `"${quotes[quoteIdx]}"`;
+        }
+
+        function sendPing(text) {
+            for (let i = 0; i < 8; i++) {
+                const heart = document.createElement('div');
+                heart.className = 'floating-heart text-2xl';
+                heart.innerText = '❤️';
+                heart.style.left = Math.random() * 80 + 10 + '%';
+                heart.style.animationDuration = (Math.random() * 1.5 + 1.5) + 's';
+                document.body.appendChild(heart);
+                setTimeout(() => heart.remove(), 2500);
+            }
+            const history = document.getElementById('pingHistory');
+            const time = new Date().toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit' });
+            history.innerHTML = `<div class="glass px-3 py-2 rounded-xl flex justify-between"><span><b>${currentUser}:</b> ${text}</span><span class="text-white/40">${time}</span></div>` + history.innerHTML;
+        }
+
+        const letters = [
+            { title: "Beni Çok Özlediğinde...", body: "Şu an yanında olamasam da aklımın ve kalbimin her saniye seninle olduğunu bil. Gözlerini kapat ve en güzel anımızı düşün. En kısa zamanda sımsıkı sarılacağız sevgilim. Seni çok seviyorum!" },
+            { title: "Gülümsemeye İhtiyacın Olduğunda...", body: "Dünyanın en güzel gülüşüne sahip kadınının üzülmesine hiç dayanamam. Ne olursa olsun her zaman arkanda ve yanındayım. Şimdi derin bir nefes al ve o güzel yüzünü güldür!" },
+            { title: "2. Yıl Dönümümüz Kutlu Olsun!", body: "9 Kasım 2024'te başlayan bu yolculukta tam 2 yılı geride bıraktık. Seninle büyümek, gülmek ve her anı paylaşmak hayatımın en büyük şansı. İlk günkü gibi, sonsuza dek..." }
+        ];
+
+        function openLetter(idx) {
+            document.getElementById('letterTitle').innerText = letters[idx].title;
+            document.getElementById('letterBody').innerText = letters[idx].body;
+            document.getElementById('letterModal').classList.remove('hidden');
+        }
+        function closeLetter() {
+            document.getElementById('letterModal').classList.add('hidden');
+        }
+
+        let goals = JSON.parse(localStorage.getItem('ks_goals')) || [
+            { text: "Birlikte gün batımını izlemek", done: true },
+            { text: "Baş başa uzun bir tatile çıkmak", done: false },
+            { text: "Sabaha kadar film maratonu yapmak", done: false }
+        ];
+
+        function renderGoals() {
+            const list = document.getElementById('goalList');
+            list.innerHTML = goals.map((g, i) => `
+                <div onclick="toggleGoal(${i})" class="glass-card p-4 rounded-2xl flex items-center gap-3 cursor-pointer">
+                    <div class="w-6 h-6 rounded-full border-2 ${g.done ? 'bg-rose-500 border-rose-500' : 'border-white/30'} flex items-center justify-center text-xs">
+                        ${g.done ? '<i class="fa-solid fa-check"></i>' : ''}
+                    </div>
+                    <span class="text-sm ${g.done ? 'line-through text-white/40' : ''}">${g.text}</span>
+                </div>
+            `).join('');
+            localStorage.setItem('ks_goals', JSON.stringify(goals));
+        }
+
+        function addGoal() {
+            const input = document.getElementById('newGoalInput');
+            if (input.value.trim()) {
+                goals.push({ text: input.value.trim(), done: false });
+                input.value = "";
+                renderGoals();
+            }
+        }
+
+        function toggleGoal(i) {
+            goals[i].done = !goals[i].done;
+            renderGoals();
+        }
+
+        const wheelOptions = [
+            "Akşam Yemeği Benden 🍝",
+            "Uzun Gece Yürüyüşü 🌙",
+            "Film Gecesi & Mısır 🍿",
+            "Kahve & Tatlı Kaçamağı ☕",
+            "10 Dakika Masaj Hakkı 💆‍♀️",
+            "Sürpriz Hediye 🎁"
+        ];
+
+        function spinWheel() {
+            const res = document.getElementById('wheelResult');
+            let count = 0;
+            const interval = setInterval(() => {
+                res.innerText = wheelOptions[Math.floor(Math.random() * wheelOptions.length)];
+                count++;
+                if (count > 15) clearInterval(interval);
+            }, 80);
+        }
+
+        function switchTab(tabName, btn) {
+            document.querySelectorAll('.tab-content').forEach(t => t.classList.add('hidden'));
+            document.getElementById('tab-' + tabName).classList.remove('hidden');
+            document.querySelectorAll('.nav-btn').forEach(b => b.classList.replace('text-rose-400', 'text-white/50'));
+            btn.classList.replace('text-white/50', 'text-rose-400');
+        }
+    </script>
+</body>
+</html>
