@@ -702,6 +702,23 @@
                 renderMemories();
             }
         }
-    </script>
+    </script
+        <audio id="romantikMuzik" src="muzik.mp3" loop preload="metadata"></audio>
+<button id="muzikBtn" type="button" onclick="toggleMuzik()" style="position:fixed;bottom:18px;right:18px;z-index:9999;padding:10px 16px;border-radius:999px;border:none;background:#e11d48;color:#fff;font-weight:600;cursor:pointer;">
+  Müzik Çal
+</button>
+<script>
+function toggleMuzik() {
+  const ses = document.getElementById("romantikMuzik");
+  const btn = document.getElementById("muzikBtn");
+  if (ses.paused) {
+    ses.play();
+    btn.textContent = "Duraklat";
+  } else {
+    ses.pause();
+    btn.textContent = "Müzik Çal";
+  }
+}
+</script>
 </body>
 </html>
